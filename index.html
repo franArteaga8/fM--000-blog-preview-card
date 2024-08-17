@@ -56,6 +56,10 @@
     font: var(--text-preset-1);
     letter-spacing: 0px;
   }
+
+  .heading-link:hover {
+    color: var(--yellow);
+  }
   
   .preset-2 {
     font: var(--text-preset-2);
@@ -85,6 +89,7 @@
   border-radius: 20px;
   box-sizing: border-box; /* Include padding in width calculation */
   text-align: left;
+  filter: drop-shadow(8px 8px black);
   
 
   > .card-content {
@@ -107,13 +112,20 @@
   }
 }
 
-img {
+.article-img {
+  height: 200px;
   border-radius: 10px;
 }
 
 .tag {
   background-color: var(--yellow);
   padding: 4px 12px;
+  border-radius: 4px;
+}
+
+a {
+  color: inherit; /* Inherit color from the parent element */
+  text-decoration: none; /* Remove underline */
 }
 
 
@@ -135,11 +147,13 @@ img {
   </header>
 
   <article role="main">
-    <img src="/assets/images/illustration-article.svg" alt="">
+    <img class="article-img" src="/assets/images/illustration-article.svg" alt="">
     <div class="card-content">
       <span class="preset-3-bold tag">Learning</span>
       <p class="preset-3">Published 17 Aug 2024</p>
-      <h1 class="preset-1">HTML & CSS foundations</h1>
+      <a href="#" class="heading-link">
+        <h1 class="preset-1">HTML & CSS foundations</h1>
+      </a>
       <p class="preset-2">These languages are the backbone of every website, defining structure, content, and presentation.</p>
   </div>
     <div class="card-author">
